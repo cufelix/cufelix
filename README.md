@@ -112,6 +112,8 @@ A 65mm brushed-motor whoop drone flown with just an ESP32 + ESP32-CAM and a lapt
 
 Some of my work lives in private repos — hackathon team code, client projects, and in-progress apps not yet ready to open up. Happy to walk through any of these:
 
+I'm also available for commercial mobile app and full-stack development work.
+
 - **NanoClaw (`spndr`)** — a self-hosted, multi-channel AI agent platform (WhatsApp / Telegram / Slack), each conversation running in its own isolated container. Built on top of the open-source [NanoClaw](https://nanoclaw.dev) framework, customized and extended for a hackathon project (87 of my own commits on top of the base framework).
 - **Forksy** — a nutrition-tracking mobile app (React Native / Expo).
 - **PhAuth** — a phone-number authentication flow for mobile apps (React Native / Expo).
