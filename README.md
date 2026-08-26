@@ -46,12 +46,12 @@ A native OS agent for Linux. Reads the AT-SPI accessibility tree to find and inv
 <tr>
 <td width="50%" valign="top">
 
-### ⚙️&nbsp; [Společník](https://github.com/cufelix/ai_olymp_-finale)
-An AI compliance agent for Czech founders. I built the pipeline that infers a new company's hidden/deferred legal obligations, auto-cross-references multiple government registries (*once-only* — it asks the state, not the user), and simulates the business forward to flag deadlines before they're missed.
+### 🪄&nbsp; [Virlya](https://virlya.com)
+An autonomous social-media content pipeline: 10 specialized AI agents turn a single brief into a full multi-platform campaign — web research, strategy, on-brand copywriting, photorealistic visuals, and publish-ready posts for Instagram, Facebook, X, LinkedIn and TikTok. Human approves the plan before generation runs, and can approve or reject posts straight from a Telegram chat.
 
-**🏆 ČAIO 2026 — national final, veřejná správa track**
+<img src="assets/virlya-campaign.jpg" width="100%" alt="Virlya campaign view — an AI-generated multi-platform post with progress tracking and an approved content plan" />
 
-![Python](https://img.shields.io/badge/-Python-1a1b26?style=flat-square&logo=python&logoColor=9ece6a)
+**🔴 Live product — [virlya.com](https://virlya.com)**
 
 </td>
 <td width="50%" valign="top">
