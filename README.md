@@ -133,6 +133,9 @@ Some of my work lives in private repos — hackathon team code, client projects,
 ![Firebase](https://img.shields.io/badge/Firebase-1a1b26?style=for-the-badge&logo=firebase&logoColor=e0af68)
 ![Docker](https://img.shields.io/badge/Docker-1a1b26?style=for-the-badge&logo=docker&logoColor=7aa2f7)
 ![Arduino](https://img.shields.io/badge/Arduino-1a1b26?style=for-the-badge&logo=arduino&logoColor=9ece6a)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-1a1b26?style=for-the-badge&logo=springboot&logoColor=9ece6a)
+![RAG](https://img.shields.io/badge/RAG-1a1b26?style=for-the-badge)
+![Vector Databases](https://img.shields.io/badge/Vector%20Databases-1a1b26?style=for-the-badge&logo=pinecone&logoColor=7aa2f7)
 
 </div>
 
