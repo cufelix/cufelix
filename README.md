@@ -1,74 +1,92 @@
 <div align="center">
 
-# Hi, I'm Felix Cumarav 👋
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1b26,50:7aa2f7,100:bb9af7&height=200&section=header&text=Felix%20Cumarav&fontSize=56&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=github.com/cufelix&descAlignY=58&descSize=18&descColor=c0caf5" />
 
-### Full-Stack Developer · AI Engineer · Technical Lead
-Building autonomous agents, mobile products, and the teams that ship them.
+<a href="https://github.com/cufelix">
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=2800&pause=900&color=7AA2F7&center=true&vCenter=true&width=620&lines=Full-Stack+Developer;AI+%2F+Agent+Engineer;Technical+Lead;I+build+systems+that+act%2C+not+just+chat." />
+</a>
 
-[![Email](https://img.shields.io/badge/Email-felix.cumarav%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:felix.cumarav@gmail.com)
+<br><br>
+
+[![Email](https://img.shields.io/badge/-felix.cumarav%40gmail.com-1a1b26?style=for-the-badge&logo=gmail&logoColor=f7768e)](mailto:felix.cumarav@gmail.com)
 
 </div>
 
 <br>
 
-I design and ship end-to-end: mobile apps, backend infrastructure, and AI agents that act on real systems instead of just chatting. Two of my projects reached the **ČAIO 2026 (Czech AI Olympiad) national final**. I've led development on a hackathon team building a multi-channel AI agent platform, and I build automation agents that control real operating systems through the accessibility tree rather than guessing from screenshots.
+I design and ship end-to-end — mobile apps, backend infrastructure, and AI agents that act on real systems instead of just answering questions. Two of my projects reached the **ČAIO 2026 (Czech AI Olympiad) national final**. I build automation agents that drive real operating systems through the accessibility tree rather than guessing from screenshots, and I've taken products from a blank repo through to Stripe payments and smart-lock hardware in production.
 
 <br>
 
+<div align="center">
+
 ## 🚀 Featured Projects
+
+</div>
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-### 🦅 [Kestrel](https://github.com/cufelix/kestrel)
+### 🦅&nbsp; [Kestrel](https://github.com/cufelix/kestrel)
 A desktop agent with hands and memory. Fork of `sst/opencode`, extended with real OS control — opening apps, clicking and reading UI elements via the accessibility tree — plus a persistent memory of the machine it runs on.
 
-`TypeScript`
+![TypeScript](https://img.shields.io/badge/-TypeScript-1a1b26?style=flat-square&logo=typescript&logoColor=7aa2f7)
 
 </td>
 <td width="50%" valign="top">
 
-### 🐧 [LAI](https://github.com/cufelix/lai)
-A native OS agent for Linux. Reads the AT-SPI accessibility tree to find and invoke real UI elements by name and action — pixel/screenshot-based control is only the fallback, not the main strategy.
+### 🐧&nbsp; [LAI](https://github.com/cufelix/lai)
+A native OS agent for Linux. Reads the AT-SPI accessibility tree to find and invoke real UI elements by name and action — pixel/screenshot-based control is only the fallback, never the main strategy.
 
-`Python`
+![Python](https://img.shields.io/badge/-Python-1a1b26?style=flat-square&logo=python&logoColor=9ece6a)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### ⚖️ [Společník](https://github.com/cufelix/ai_olymp_-finale)
-An AI legal co-founder for Czech startups: walks a founder through incorporating an s.r.o., then stays on to infer hidden/deferred legal obligations, cross-reference government registries, and warn before deadlines are missed.
+### ⚙️&nbsp; [Společník](https://github.com/cufelix/ai_olymp_-finale)
+An AI compliance agent for Czech founders. I built the pipeline that infers a new company's hidden/deferred legal obligations, auto-cross-references multiple government registries (*once-only* — it asks the state, not the user), and simulates the business forward to flag deadlines before they're missed.
 
 **🏆 ČAIO 2026 — national final, veřejná správa track**
 
+![Python](https://img.shields.io/badge/-Python-1a1b26?style=flat-square&logo=python&logoColor=9ece6a)
+
 </td>
 <td width="50%" valign="top">
 
-### 🔌 [VoltPlán](https://github.com/cufelix/notokens_olymp)
-A V2G-based EV-charging infrastructure plan for Prague: predicts 2030 demand, classifies the right charging-solution type per zone, and uses bidirectional car-to-grid charging to protect the grid from load spikes.
+### 🔌&nbsp; [VoltPlán](https://github.com/cufelix/notokens_olymp)
+A V2G-based EV-charging infrastructure plan for Prague: a model predicting 2030 demand, a classifier recommending the right charging-solution type per zone, and a load-shifting layer that resolves grid overloads by delaying charge windows instead of new hardware.
 
 **🏆 ČAIO 2026 — AI Startup track finalist**
+
+<img src="assets/voltplan-dashboard.png" width="100%" alt="VoltPlán dashboard — predicted EV charging demand across Prague zones on a map, with model accuracy metrics and a per-zone recommendation detail panel" />
+
+![Python](https://img.shields.io/badge/-Python-1a1b26?style=flat-square&logo=python&logoColor=9ece6a)
+![Streamlit](https://img.shields.io/badge/-Streamlit-1a1b26?style=flat-square&logo=streamlit&logoColor=ff4b4b)
+![scikit--learn](https://img.shields.io/badge/-scikit--learn-1a1b26?style=flat-square&logo=scikitlearn&logoColor=f7768e)
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### 🚐 [Pripoj.to](https://github.com/cufelix/voz01)
+### 🚐&nbsp; [Pripoj.to](https://github.com/cufelix/voz01)
 A complete trailer-rental platform: React Native app, Next.js admin panel, Firebase Cloud Functions backend, Stripe payments, and Igloohome smart-lock integration for keyless pickup.
 
-`React Native` `Firebase` `Next.js` `Stripe`
+![React Native](https://img.shields.io/badge/-React%20Native-1a1b26?style=flat-square&logo=react&logoColor=7aa2f7)
+![Firebase](https://img.shields.io/badge/-Firebase-1a1b26?style=flat-square&logo=firebase&logoColor=e0af68)
+![Stripe](https://img.shields.io/badge/-Stripe-1a1b26?style=flat-square&logo=stripe&logoColor=bb9af7)
 
 </td>
 <td width="50%" valign="top">
 
-### 🛸 [ESP32 Whoop Drone](https://github.com/cufelix/Arduino)
-A 65mm brushed-motor whoop drone flown with just an ESP32 + ESP32-CAM and a laptop as ground station — **no flight controller board, no IMU**. Solves stabilization in software instead of dedicated flight-control hardware.
+### 🛸&nbsp; [ESP32 Whoop Drone](https://github.com/cufelix/Arduino)
+A 65mm brushed-motor whoop drone flown with just an ESP32 + ESP32-CAM and a laptop as ground station — **no flight controller board, no IMU**. Stabilization is solved in software instead of with dedicated flight-control hardware.
 
-`C++` `ESP32`
+![C++](https://img.shields.io/badge/-C%2B%2B-1a1b26?style=flat-square&logo=cplusplus&logoColor=7aa2f7)
+![Arduino](https://img.shields.io/badge/-ESP32-1a1b26?style=flat-square&logo=arduino&logoColor=9ece6a)
 
 </td>
 </tr>
@@ -86,7 +104,11 @@ A 65mm brushed-motor whoop drone flown with just an ESP32 + ESP32-CAM and a lapt
 
 <br>
 
+<div align="center">
+
 ## 🔒 Private / Team & Client Work
+
+</div>
 
 Some of my work lives in private repos — hackathon team code, client projects, and in-progress apps not yet ready to open up. Happy to walk through any of these:
 
@@ -97,31 +119,36 @@ Some of my work lives in private repos — hackathon team code, client projects,
 
 <br>
 
+<div align="center">
+
 ## 🛠️ Tech Stack
 
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![React Native](https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-1a1b26?style=for-the-badge&logo=typescript&logoColor=7aa2f7)
+![JavaScript](https://img.shields.io/badge/JavaScript-1a1b26?style=for-the-badge&logo=javascript&logoColor=e0af68)
+![Python](https://img.shields.io/badge/Python-1a1b26?style=for-the-badge&logo=python&logoColor=9ece6a)
+![Java](https://img.shields.io/badge/Java-1a1b26?style=for-the-badge&logo=openjdk&logoColor=f7768e)
+![React](https://img.shields.io/badge/React-1a1b26?style=for-the-badge&logo=react&logoColor=7aa2f7)
+![Next.js](https://img.shields.io/badge/Next.js-1a1b26?style=for-the-badge&logo=nextdotjs&logoColor=ffffff)
+![Node.js](https://img.shields.io/badge/Node.js-1a1b26?style=for-the-badge&logo=nodedotjs&logoColor=9ece6a)
+![Firebase](https://img.shields.io/badge/Firebase-1a1b26?style=for-the-badge&logo=firebase&logoColor=e0af68)
+![Docker](https://img.shields.io/badge/Docker-1a1b26?style=for-the-badge&logo=docker&logoColor=7aa2f7)
+![Arduino](https://img.shields.io/badge/Arduino-1a1b26?style=for-the-badge&logo=arduino&logoColor=9ece6a)
+
+</div>
 
 <br>
 
-## 📊 GitHub Stats
-
 <div align="center">
+
+## 📊 GitHub Stats
 
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=cufelix&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
 <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=cufelix&layout=compact&theme=tokyonight&hide_border=true" />
 
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=cufelix&theme=tokyonight&hide_border=true" />
 
-</div>
+<br><br>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:bb9af7,50:7aa2f7,100:1a1b26&height=100&section=footer" />
 
 </div>
