@@ -140,15 +140,6 @@ Some of my work lives in private repos — hackathon team code, client projects,
 
 <div align="center">
 
-## 📊 GitHub Stats
-
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=cufelix&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=cufelix&layout=compact&theme=tokyonight&hide_border=true" />
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=cufelix&theme=tokyonight&hide_border=true" />
-
-<br><br>
-
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:bb9af7,50:7aa2f7,100:1a1b26&height=100&section=footer" />
 
 </div>
