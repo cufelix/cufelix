@@ -56,7 +56,7 @@ I ship the unglamorous half too: payments, auth, backups, firewalls, store relea
 **OFC Poker** &nbsp;<sub>client contract · in build · 95 PRs</sub><br>
 Real-time multiplayer card game for iOS and Android. The rules engine is a Rust crate shared with the Node server through native bindings; the app is Expo / React Native, play runs over WebSockets with matchmaking, private tables, tournaments and bots in three difficulties on worker threads. Hardened like it will be attacked: nftables rate limits, Caddy security headers, instant token revocation through Redis, point-in-time restore drills, Prometheus alerts and a Grafana dashboard. Load-tested at 300 concurrent players.
 
-**[Pripoj.to](https://github.com/cufelix/voz01)** &nbsp;<sub>full product, one developer</sub><br>
+**[Pripoj.to](https://github.com/cufelix/voz01)** &nbsp;<sub>full product</sub><br>
 Trailer rental end to end: React Native app, Next.js admin, Firebase Cloud Functions, Stripe payments and Igloohome smart locks, so the customer picks up a trailer with no one there to hand over a key.
 
 **Fantastické obědy** &nbsp;<sub>client · in development</sub><br>
