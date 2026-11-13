@@ -44,23 +44,33 @@ $ lai do "open the text editor, write a haiku about X11, save it to ~/haiku.txt"
 | **VoltPlán** | MAE, EV charging demand per zone per day (517-zone holdout) | **4.7** | 84 % worse <sub>∝ population</sub> |
 | **VoltPlán** | Precision@50, zones that matter for placement | **0.84** | |
 | **LAI** | test suite | **1,825** tests | |
-| **OFC Poker** | friend search, 300k users | **0.5 ms** | 45 ms |
-| **OFC Poker** | scheduler due-query, 3M job rows | **0.1 ms** | 258 ms |
 
 <br>
 
 ## Production
 
-I ship the unglamorous half too: payments, auth, backups, firewalls, store releases.
+Agents are half of it. The other half is software real businesses run on: payments, auth, scheduling, invoices, hardware, store releases.
 
-**OFC Poker** &nbsp;<sub>client contract · in build · 95 PRs</sub><br>
-Real-time multiplayer card game for iOS and Android. The rules engine is a Rust crate shared with the Node server through native bindings; the app is Expo / React Native, play runs over WebSockets with matchmaking, private tables, tournaments and bots in three difficulties on worker threads. Hardened like it will be attacked: nftables rate limits, Caddy security headers, instant token revocation through Redis, point-in-time restore drills, Prometheus alerts and a Grafana dashboard. Load-tested at 300 concurrent players.
+**[Pripoj.to](https://github.com/cufelix/voz01)** &nbsp;<sub>trailer rental · full product</sub><br>
+Rent a trailer from your phone and pick it up with nobody there. React Native app with phone-number sign-in, a live map of trailers and availability-checked booking; Stripe with 3-D Secure; Firebase Cloud Functions that turn a paid booking into a time-limited Igloohome lock PIN, extend rentals and clean up expired codes; a Next.js admin with the fleet's real-time state, pricing and stats.
 
-**[Pripoj.to](https://github.com/cufelix/voz01)** &nbsp;<sub>full product</sub><br>
-Trailer rental end to end: React Native app, Next.js admin, Firebase Cloud Functions, Stripe payments and Igloohome smart locks, so the customer picks up a trailer with no one there to hand over a key.
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#161b22','primaryTextColor':'#e6edf3','primaryBorderColor':'#e0af68','lineColor':'#e0af68'}}}%%
+flowchart LR
+    U[app<br/>map · booking] --> A{availability<br/>check}
+    A --> S[Stripe<br/>3-D Secure]
+    S -- webhook --> F[Cloud Function]
+    F --> L[Igloohome<br/>time-limited PIN]
+    L --> K[keyless pickup<br/>check-in · check-out]
+    F --> M[admin<br/>live fleet · pricing]
+    K --> X[auto-extend<br/>expired PIN cleanup]
+```
 
 **Meal-box ordering system** &nbsp;<sub>client · in development</sub><br>
-For a meal-box delivery company: web shop with weekly menus and allergens, delivery-zone checks drawn on a map, online payments, automatic matching of bank-statement payments to invoices, accounting export and a CRM behind it all.
+Replaces a meal-box delivery company's web shop and spreadsheets with one system: weekly menus built from a dish database with allergens, an order cut-off every Thursday 23:59 for Mon–Fri delivery, delivery zones drawn on a map with manual approval at the edges, online payments, bank-statement import that matches payments to invoices automatically, accounting export, and a CRM over all of it. Specified down to the domain model, API, security, migration and running costs before the first line of code.
+
+**Multiplayer mobile game** &nbsp;<sub>client · in development</sub><br>
+Real-time iOS / Android game with a Rust rules engine, WebSockets, matchmaking and bots; load-tested at 300 concurrent players.
 
 <sub>Also: Forksy, a nutrition tracker, and PhAuth, phone-number sign-in, both React Native / Expo.</sub>
 
@@ -130,7 +140,7 @@ flowchart LR
 ## Also
 
 **Inspector AI** &nbsp;<sub>private</sub><br>
-Real-time computer vision: one overhead camera per blackjack table checks every payout and alerts a tablet within a second. Full build spec, latency budget and ten experiments behind it. Happy to walk through it.
+Real-time computer vision: one overhead camera per table checks every payout and alerts a tablet within a second. Full build spec, latency budget and ten experiments behind it. Happy to walk through it.
 
 **Tools for working with agents**<br>
 [claude-session-dots](https://github.com/cufelix/claude-session-dots): a panel dot per Claude Code session that turns red when one is waiting on you.<br>
