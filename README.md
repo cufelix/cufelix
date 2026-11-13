@@ -59,11 +59,9 @@ Rent a trailer from your phone and pick it up with nobody there. React Native ap
 flowchart LR
     U[app<br/>map · booking] --> A{availability<br/>check}
     A --> S[Stripe<br/>3-D Secure]
-    S -- webhook --> F[Cloud Function]
-    F --> L[Igloohome<br/>time-limited PIN]
-    L --> K[keyless pickup<br/>check-in · check-out]
+    S -- webhook --> F[Cloud Functions<br/>auto-extend · PIN cleanup]
+    F --> L[Igloohome PIN<br/>keyless pickup]
     F --> M[admin<br/>live fleet · pricing]
-    K --> X[auto-extend<br/>expired PIN cleanup]
 ```
 
 **Meal-box ordering system** &nbsp;<sub>client · in development</sub><br>
