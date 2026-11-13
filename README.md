@@ -2,7 +2,7 @@
 
 # Felix Cumarav
 
-**I build agents that operate real software,<br>and the models and evals that tell me whether they actually work.**
+**I build agents that operate real software, models measured against a baseline,<br>and the production systems around them, from database to App Store.**
 
 Prague &nbsp;·&nbsp; ČAIO 2026 finalist &nbsp;·&nbsp; open to contract work
 
@@ -44,6 +44,25 @@ $ lai do "open the text editor, write a haiku about X11, save it to ~/haiku.txt"
 | **VoltPlán** | MAE, EV charging demand per zone per day (517-zone holdout) | **4.7** | 84 % worse <sub>∝ population</sub> |
 | **VoltPlán** | Precision@50, zones that matter for placement | **0.84** | |
 | **LAI** | test suite | **1,825** tests | |
+| **OFC Poker** | friend search, 300k users | **0.5 ms** | 45 ms |
+| **OFC Poker** | scheduler due-query, 3M job rows | **0.1 ms** | 258 ms |
+
+<br>
+
+## Production
+
+I ship the unglamorous half too: payments, auth, backups, firewalls, store releases.
+
+**OFC Poker** &nbsp;<sub>client contract · in build · 95 PRs</sub><br>
+Real-time multiplayer card game for iOS and Android. The rules engine is a Rust crate shared with the Node server through native bindings; the app is Expo / React Native, play runs over WebSockets with matchmaking, private tables, tournaments and bots in three difficulties on worker threads. Hardened like it will be attacked: nftables rate limits, Caddy security headers, instant token revocation through Redis, point-in-time restore drills, Prometheus alerts and a Grafana dashboard. Load-tested at 300 concurrent players.
+
+**[Pripoj.to](https://github.com/cufelix/voz01)** &nbsp;<sub>full product, one developer</sub><br>
+Trailer rental end to end: React Native app, Next.js admin, Firebase Cloud Functions, Stripe payments and Igloohome smart locks, so the customer picks up a trailer with no one there to hand over a key.
+
+**Fantastické obědy** &nbsp;<sub>client · in development</sub><br>
+Ordering system for a meal-box delivery company: web shop with weekly menus and allergens, delivery-zone checks drawn on a map, online payments, automatic matching of bank-statement payments to invoices, accounting export and a CRM behind it all.
+
+<sub>Also: Forksy, a nutrition tracker, and PhAuth, phone-number sign-in, both React Native / Expo.</sub>
 
 <br>
 
@@ -52,7 +71,7 @@ $ lai do "open the text editor, write a haiku about X11, save it to ~/haiku.txt"
 Desktop agents mostly fail on **grounding**: a model looking at a screenshot guesses coordinates and guesses wrong. LAI reads the AT-SPI accessibility tree, the desktop's DOM, fuses it with four other sources of truth and invokes widgets through their own accessible actions. Pixels are the fallback, not the plan.
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'fontFamily':'ui-monospace, monospace','fontSize':'13px','primaryColor':'#161b22','primaryTextColor':'#e6edf3','primaryBorderColor':'#7aa2f7','lineColor':'#7aa2f7','clusterBkg':'transparent','clusterBorder':'#30363d'}}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#161b22','primaryTextColor':'#e6edf3','primaryBorderColor':'#7aa2f7','lineColor':'#7aa2f7','clusterBkg':'transparent','clusterBorder':'#30363d'}}}%%
 flowchart LR
     subgraph perceive [perceive]
         A[AT-SPI tree<br/>role · name · state · bounds]
@@ -80,7 +99,7 @@ flowchart LR
 2030 EV-charging demand for every grid zone in Prague, a station-type recommendation per zone, and a V2G layer that resolves grid overloads by moving charge windows instead of building hardware.
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'fontFamily':'ui-monospace, monospace','fontSize':'13px','primaryColor':'#161b22','primaryTextColor':'#e6edf3','primaryBorderColor':'#9ece6a','lineColor':'#9ece6a'}}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#161b22','primaryTextColor':'#e6edf3','primaryBorderColor':'#9ece6a','lineColor':'#9ece6a'}}}%%
 flowchart LR
     D[(70+ features<br/>population · housing<br/>transit · grid)] --> L[leakage guard<br/>drop target-derived cols]
     L --> M[LightGBM<br/>P10 · P50 · P90 heads]
@@ -98,7 +117,7 @@ flowchart LR
 Ten specialised agents turn one brief into a multi-platform campaign. A human signs off on the plan before anything is generated, and approves or rejects finished posts from Telegram.
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'fontFamily':'ui-monospace, monospace','fontSize':'13px','primaryColor':'#161b22','primaryTextColor':'#e6edf3','primaryBorderColor':'#bb9af7','lineColor':'#bb9af7'}}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#161b22','primaryTextColor':'#e6edf3','primaryBorderColor':'#bb9af7','lineColor':'#bb9af7'}}}%%
 flowchart LR
     B[brief] --> R[web research] --> S[strategy] --> H{human<br/>approves plan}
     H --> C[on-brand copy] & I[image generation]
@@ -118,9 +137,6 @@ Real-time computer vision: one overhead camera per blackjack table checks every 
 [learn-claude-code](https://github.com/cufelix/learn-claude-code): an AI tutor where answer keys are committed before the question is shown, so the model can't grade itself generously.<br>
 [claude-widget](https://github.com/cufelix/claude-widget): 5-hour and weekly usage limits in the Cinnamon panel.
 
-**[Pripoj.to](https://github.com/cufelix/voz01)**<br>
-Trailer-rental platform shipped end to end: React Native app, Next.js admin, Firebase, Stripe, Igloohome smart locks for keyless pickup.
-
 <br>
 
 ## How I work
@@ -139,7 +155,7 @@ Trailer-rental platform shipped end to end: React Native app, Next.js admin, Fir
 <sub>
 <b>ML</b> &nbsp;Python · LightGBM · scikit-learn · polars · DuckDB · Streamlit<br>
 <b>Agents</b> &nbsp;tool use · MCP · RAG · vector databases · multi-agent pipelines · evals<br>
-<b>Systems</b> &nbsp;TypeScript · Bun · Node · Docker · Linux internals (X11, AT-SPI)<br>
+<b>Systems</b> &nbsp;TypeScript · Rust · Node · Bun · PostgreSQL · Redis · Docker · Caddy · Linux (X11, AT-SPI)<br>
 <b>Product</b> &nbsp;React Native / Expo · Next.js · Firebase · Stripe · Spring Boot
 </sub>
 
