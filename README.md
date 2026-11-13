@@ -28,7 +28,6 @@ Prague &nbsp;·&nbsp; ČAIO 2026 finalist &nbsp;·&nbsp; open to contract work
 | 🦅 | **[Kestrel](https://github.com/cufelix/kestrel)** | desktop agent with memory and its own screen, built on opencode | TypeScript · Bun · LAI |
 | ⚡ | **[VoltPlán](https://github.com/cufelix/notokens_olymp)** | forecasts EV-charging demand for every zone in Prague | LightGBM · scikit-learn · Streamlit |
 | 🪄 | **[Virlya](https://virlya.com)** | ten agents turn one brief into a full social-media campaign | multi-agent · image generation · Telegram |
-| 👁️ | **Inspector AI** | real-time camera system that checks payouts at a table | computer vision · cloud · tablet alerts |
 
 <br>
 
@@ -138,9 +137,6 @@ flowchart LR
 <br>
 
 ## Also
-
-**Inspector AI** &nbsp;<sub>private</sub><br>
-Real-time computer vision: one overhead camera per table checks every payout and alerts a tablet within a second. Full build spec, latency budget and ten experiments behind it. Happy to walk through it.
 
 **Tools for working with agents**<br>
 [claude-session-dots](https://github.com/cufelix/claude-session-dots): a panel dot per Claude Code session that turns red when one is waiting on you.<br>
