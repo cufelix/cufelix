@@ -2,10 +2,11 @@
 
 # Felix Cumarav
 
-**I build agents that operate real software, models measured against a baseline,<br>and the production systems around them, from database to App Store.**
+**I ship production apps that businesses run on,<br>and AI agents and models that operate real software.**
 
 Prague &nbsp;·&nbsp; ČAIO 2026 finalist &nbsp;·&nbsp; open to contract work
 
+<kbd>&nbsp;[Pripoj.to](https://github.com/cufelix/voz01)&nbsp;</kbd> &nbsp;
 <kbd>&nbsp;[LAI](https://github.com/cufelix/lai)&nbsp;</kbd> &nbsp;
 <kbd>&nbsp;[Kestrel](https://github.com/cufelix/kestrel)&nbsp;</kbd> &nbsp;
 <kbd>&nbsp;[VoltPlán](https://github.com/cufelix/notokens_olymp)&nbsp;</kbd> &nbsp;
@@ -16,34 +17,18 @@ Prague &nbsp;·&nbsp; ČAIO 2026 finalist &nbsp;·&nbsp; open to contract work
 
 <br>
 
-```diff
-$ lai do "open the text editor, write a haiku about X11, save it to ~/haiku.txt"
+## What I build
 
-  ▸ app_open      {"name": "Text Editor"}
-+   ✓ window up after 0.6s
-  ▸ ui_snapshot
-+   ✓ 57 accessible elements
-  ▸ ui_type       {"ref": 12, "text": "Pixels in a grid…"}
-+   ✓ set via a11y_set_text
-  ▸ ui_click      {"name": "Save"}
-+   ✓ invoked via a11y_action, not a pixel click
-  ▸ file_read     {"path": "~/haiku.txt"}
-+   ✓ effect verified on disk
-
-@@ completed: 8 steps in 34s @@
-```
-
-<br>
-
-## Results
-
-| Project | What was measured | Mine | Baseline |
-|:--|:--|--:|--:|
-| **Kestrel** | tool calls for the same task, same model, same tools | **7** | 18 &nbsp;<sub>opencode + MCP</sub> |
-| **Kestrel** | accessible elements visible in VS Code after one fix | **69** | 1 |
-| **VoltPlán** | MAE, EV charging demand per zone per day (517-zone holdout) | **4.7** | 84 % worse <sub>∝ population</sub> |
-| **VoltPlán** | Precision@50, zones that matter for placement | **0.84** | |
-| **LAI** | test suite | **1,825** tests | |
+| | Project | What it is | Built with |
+|:-:|:--|:--|:--|
+| 🚐 | **[Pripoj.to](https://github.com/cufelix/voz01)** | trailer rental with keyless pickup through smart locks | React Native · Next.js · Firebase · Stripe · Igloohome |
+| 🍱 | **Meal-box ordering** | orders, menus, delivery zones, payments and invoicing for a food-delivery company | web shop · admin · CRM · payments · bank import |
+| 🎮 | **Multiplayer game** | real-time iOS / Android game for a client | Expo · Rust engine · WebSockets · Redis |
+| 🐧 | **[LAI](https://github.com/cufelix/lai)** | AI agent that drives the whole Linux desktop through the accessibility tree | Python · AT-SPI · X11 · MCP |
+| 🦅 | **[Kestrel](https://github.com/cufelix/kestrel)** | desktop agent with memory and its own screen, built on opencode | TypeScript · Bun · LAI |
+| ⚡ | **[VoltPlán](https://github.com/cufelix/notokens_olymp)** | forecasts EV-charging demand for every zone in Prague | LightGBM · scikit-learn · Streamlit |
+| 🪄 | **[Virlya](https://virlya.com)** | ten agents turn one brief into a full social-media campaign | multi-agent · image generation · Telegram |
+| 👁️ | **Inspector AI** | real-time camera system that checks payouts at a table | computer vision · cloud · tablet alerts |
 
 <br>
 
@@ -77,6 +62,23 @@ Real-time iOS / Android game with a Rust rules engine, WebSockets, matchmaking a
 ## Desktop agents · [LAI](https://github.com/cufelix/lai) + [Kestrel](https://github.com/cufelix/kestrel)
 
 Desktop agents mostly fail on **grounding**: a model looking at a screenshot guesses coordinates and guesses wrong. LAI reads the AT-SPI accessibility tree, the desktop's DOM, fuses it with four other sources of truth and invokes widgets through their own accessible actions. Pixels are the fallback, not the plan.
+
+```diff
+$ lai do "open the text editor, write a haiku about X11, save it to ~/haiku.txt"
+
+  ▸ app_open      {"name": "Text Editor"}
++   ✓ window up after 0.6s
+  ▸ ui_snapshot
++   ✓ 57 accessible elements
+  ▸ ui_type       {"ref": 12, "text": "Pixels in a grid…"}
++   ✓ set via a11y_set_text
+  ▸ ui_click      {"name": "Save"}
++   ✓ invoked via a11y_action, not a pixel click
+  ▸ file_read     {"path": "~/haiku.txt"}
++   ✓ effect verified on disk
+
+@@ completed: 8 steps in 34s @@
+```
 
 ```mermaid
 %%{init: {'theme':'base','themeVariables':{'primaryColor':'#161b22','primaryTextColor':'#e6edf3','primaryBorderColor':'#7aa2f7','lineColor':'#7aa2f7','clusterBkg':'transparent','clusterBorder':'#30363d'}}}%%
