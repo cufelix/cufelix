@@ -59,8 +59,8 @@ Real-time multiplayer card game for iOS and Android. The rules engine is a Rust 
 **[Pripoj.to](https://github.com/cufelix/voz01)** &nbsp;<sub>full product</sub><br>
 Trailer rental end to end: React Native app, Next.js admin, Firebase Cloud Functions, Stripe payments and Igloohome smart locks, so the customer picks up a trailer with no one there to hand over a key.
 
-**Fantastické obědy** &nbsp;<sub>client · in development</sub><br>
-Ordering system for a meal-box delivery company: web shop with weekly menus and allergens, delivery-zone checks drawn on a map, online payments, automatic matching of bank-statement payments to invoices, accounting export and a CRM behind it all.
+**Meal-box ordering system** &nbsp;<sub>client · in development</sub><br>
+For a meal-box delivery company: web shop with weekly menus and allergens, delivery-zone checks drawn on a map, online payments, automatic matching of bank-statement payments to invoices, accounting export and a CRM behind it all.
 
 <sub>Also: Forksy, a nutrition tracker, and PhAuth, phone-number sign-in, both React Native / Expo.</sub>
 
